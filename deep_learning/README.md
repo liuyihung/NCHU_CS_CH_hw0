@@ -4,7 +4,7 @@ with refrence: [work1](https://www.kaggle.com/code/harshpriye/dogs-breed-predict
 
 ## this code is run on colab, also with other work(CNN,file name=traditional_CNN_for_70_dog_set.ipynb) but with poor performance due to hardware source limit, i also upload it in folder
 
-這個模型使用了InceptionV3, 為keras所包含的pre trained model之一，一開始的輸入層為non trainable的InceptionV3 model，最後會將輸出結果輸入到一Global average Pool layer，選用Global Average Pool layer的主要理由為其可以在降低接續計算的參數量的同時(但仍然保留channel數)，藉由normalization避免over fit的現象，最後經過兩層dense layer(activation function分別為relu和softmax)，最後我們在輸出test_data.xlsx時則選擇機率最高的可能輸出作為解答。  
+這個模型/code(deep_learn_for_70dogset_ICPV3_ver.ipynb)使用了InceptionV3, 為keras所包含的pre trained model之一，一開始的輸入層為non trainable的InceptionV3 model，最後會將輸出結果輸入到一Global average Pool layer，選用Global Average Pool layer的主要理由為其可以在降低接續計算的參數量的同時(但仍然保留channel數)，藉由normalization避免over fit的現象，最後經過兩層dense layer(activation function分別為relu和softmax)，最後我們在輸出test_data.xlsx時則選擇機率最高的可能輸出作為解答。  
 ## discution based on valid set result
 我們在訓練時使用了dataset中的valid_data作為validation使用，由下圖:  
 ![image](https://github.com/liuyihung/NCHU_CS_CH_hw0/blob/main/deep_learning/valid_train_acc.png)  
