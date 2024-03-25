@@ -32,3 +32,6 @@ $$g(x) = \begin{dcases}
 2. uniform cross over
 3. allow some weaker parent pass selection  
 值得注意的是，在我的嘗試中，point mutation似乎是一個較為有利/關鍵的方式去避免困在local maxima的方式
+
+### 4. result
+![image](https://github.com/liuyihung/NCHU_CS_CH_hw0/blob/main/geneic_algorithm/genetic_algorithm_result.png)
