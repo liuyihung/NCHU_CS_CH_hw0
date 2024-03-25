@@ -9,3 +9,7 @@ with refrence: [work1](https://www.kaggle.com/code/harshpriye/dogs-breed-predict
 我們在訓練時使用了dataset中的valid_data作為validation使用，由下圖:  
 ![image](https://github.com/liuyihung/NCHU_CS_CH_hw0/blob/main/deep_learning/valid_train_acc.png)  
 fig.1: validation set accuracy and train set accuracy in epoches  
+從圖片中，我們觀察到在訓練初期validation set的accuracy 激烈震盪，但當 training set的accuracy進入平原期後，則 
+![image](https://github.com/liuyihung/NCHU_CS_CH_hw0/blob/main/deep_learning/valid_train_loss.png)  
+fig.2: validation set loss and train set loss in epoches  
+從圖片中，我們觀察到在訓練初期出現training set loss的下降和validation set loss的激烈震盪/上升，這是訓練初期的正常現象，之後則兩者皆緩慢下降進入平原期，因此在對應的區間也確實進入learning rate下降的過程，避免over fit的情況
