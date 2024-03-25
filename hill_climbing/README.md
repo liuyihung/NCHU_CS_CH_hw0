@@ -6,7 +6,7 @@ it is an algorithm based on local search and greedy technique.
 本問題為0/1 knapsacks problem, 原始的問題定義function(for profits in pack):
 $$f(x)=\sum_{k=1}^n x_k v_k=profit \$$  
 
-$$f(x)=\sum_{k=1}^n x_k v_k\$$
+
 
 $$x_k=\begin{cases}
  1, &item_k&be&chosed \\
