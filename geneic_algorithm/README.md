@@ -6,7 +6,7 @@ it is an algorithm based on local search and greedy technique.
 本問題為0/1 knapsacks problem, 原始的問題定義function(for profits in pack):
 $$f(x)=\sum_{k=1}^n x_k v_k=profit \$$  
 
-$$f(x)=\sum_{k=1}^n x_k v_k\$$
+
 
 $$x_k=\begin{cases}
  1, &item_k&be&chosed \\
@@ -21,4 +21,14 @@ $$g(x) = \begin{dcases}
     0 & \text{otherwise}
 \end{dcases}\$$
 
-### 3. 每次iteration的操作
+### 3. 每次generation的操作:
+在每一次的generation中會進行以下操作(except first generation):
+#### 1. 查看上一世代的population中的最佳解是否比當前全局最佳解好，如果較好則更新全局最佳解
+#### 2. 由上一代的population中篩選一定數目的較佳解(selection), 並隨機選取部分較差的解併作這一代的parent set
+#### 3. 每一次隨機兩個parent set中pair-wise better的解，組合出新的子代併作這一代的population(population由上一代的parent set+子代組合而成)
+
+在這邊，由於Genetic algorithm一樣有被困在local maxima的可能發生，採用了以下策略:  
+1. point mutation
+2. uniform cross over
+3. allow some weaker parent pass selection  
+值得注意的是，在我的嘗試中，point mutation似乎是一個較為有利/關鍵的方式去避免困在local maxima的方式
